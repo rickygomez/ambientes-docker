@@ -1,0 +1,2 @@
+/bancos/mysql/imports/*
+!/bancos/mysql/imports/readme.md

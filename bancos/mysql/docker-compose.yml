@@ -1,0 +1,33 @@
+version: '3.9'
+
+services:
+  dbserver:
+    image: mysql:5.7
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./imports:/imports
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      #MYSQL_DATABASE: NAME_DB
+      #MYSQL_USER: USER_DB
+      #MYSQL_PASSWORD: PASS_DB
+      MYSQL_TCP_PORT: 3306
+    ports:
+    - 3306:3306
+    expose:
+      - 3306
+
+  phpmyadmin:
+    depends_on:
+      - dbserver
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    ports:
+      - 8888:80
+    environment:
+      PMA_HOST: dbserver:3306
+      MYSQL_ROOT_PASSWORD: root
+
+volumes:
+  mysql_data:

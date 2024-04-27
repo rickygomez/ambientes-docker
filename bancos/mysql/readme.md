@@ -1,12 +1,12 @@
 # Ambinte Dev MySql 5.7
 
-* Author: Ricardo Gómez
+* Autor: Ricardo Gómez
 * E-mail: rickygomez.rj@gmqil.com
 * Github: https://github.com/rickygomez
 
 ## Objetivo
 
-Ambiente MySql, usando Docker
+ambiente MySql, usando Docker
 
 ## Executar
 

@@ -1,6 +1,6 @@
 # Ambinte Dev em Docker
 
-* Author: Ricardo Gómez
+* Autor: Ricardo Gómez
 * E-mail: rickygomez.rj@gmqil.com
 * Github: https://github.com/rickygomez
 

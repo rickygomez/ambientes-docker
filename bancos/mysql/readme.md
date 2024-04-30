@@ -6,7 +6,7 @@
 
 ## Objetivo
 
-ambiente MySql, usando Docker
+Ambiente MySQL e PhpMyAdmin, usando Docker
 
 ## Executar
 
@@ -17,8 +17,10 @@ docker compose up
 ## Observações
 
 Existe uma pasta chamada "/imports" que pode ser usada para inserir o dump de bancos em .sql para importar via terminal.
+
 A senha do usaurio root do banco esta definida no arquivo "docker-compose.yml"
-E possivel acessar o phpmyadmin pela porta 8888 que foi definada no arquivo "docker-compose.yml"
+
+E possivel acessar o phpmyadmin pela porta 8800 que foi definada no arquivo "docker-compose.yml"
 
 ### Acessar mysql via teminal
 

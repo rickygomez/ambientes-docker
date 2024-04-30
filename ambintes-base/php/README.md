@@ -10,7 +10,7 @@ Ambiente Base em PHP e Xdebug, usando Docker no VS Code através o Dev Container
 
 ## Configurações
 
-Para cada versão do PHP é necessário alterar a o Xdebug compativel, aterando ow argumento XDEBUG_VERSION e PHP_APACHE_VERSION no arquivo "docker-compose.yml"
+Para cada versão do PHP é necessário alterar a o Xdebug compatível, alterando os argumentos XDEBUG_VERSION e PHP_APACHE_VERSION no arquivo "docker-compose.yml"
 
 ### PHP 8.3
 

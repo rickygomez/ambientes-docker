@@ -1,8 +1,9 @@
+ARG PHP_APACHE_VERSION=8.3
 # Use an official PHP Apache runtime
-FROM php:7.4-apache
+FROM php:${PHP_APACHE_VERSION}-apache
 
-# Xdebug
-ARG XDEBUG_VERSION=3.1.1
+# Set the xdebug version
+ARG XDEBUG_VERSION=3.3.1
 
 # Enable Apache modules
 RUN a2enmod rewrite
@@ -25,6 +26,7 @@ RUN set -eux; \
             libmcrypt-dev \
             libonig-dev; \
     rm -rf /var/lib/apt/lists/*
+
 
 RUN pecl install xdebug-${XDEBUG_VERSION} \
     && docker-php-ext-enable xdebug

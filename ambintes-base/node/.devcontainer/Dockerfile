@@ -1,5 +1,7 @@
 # Use an official PHP Apache runtime
-FROM node:16-slim
+ARG NODEJS_VERSION=20
+
+FROM node:${NODEJS_VERSION}-slim
 
 WORKDIR /home/node/app
 

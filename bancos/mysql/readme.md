@@ -20,7 +20,7 @@ Existe uma pasta chamada "/imports" que pode ser usada para inserir o dump de ba
 
 A senha do usaurio root do banco esta definida no arquivo "docker-compose.yml"
 
-E possivel acessar o phpmyadmin pela porta 8800 que foi definada no arquivo "docker-compose.yml"
+E possivel acessar o phpmyadmin pela porta 8000 que foi definada no arquivo "docker-compose.yml"
 
 ### Acessar mysql via teminal
 

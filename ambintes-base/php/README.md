@@ -8,6 +8,10 @@
 
 Ambiente Base em PHP e Xdebug, usando Docker no VS Code através o Dev Container
 
+## Acessando via Navegador Web
+
+Para acessa via Navegador Web usar a porta 8800 que foi definada no arquivo "docker-compose.yml"
+
 ## Configurações
 
 ### Versão do PHP

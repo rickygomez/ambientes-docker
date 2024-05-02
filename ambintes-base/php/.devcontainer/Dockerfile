@@ -2,6 +2,11 @@ ARG PHP_APACHE_VERSION=8.3
 # Use an official PHP Apache runtime
 FROM php:${PHP_APACHE_VERSION}-apache
 
+# Set the Apache public directory
+ARG APACHE_PUBLIC_PATH=/var/www/html
+ENV PUBLIC_PATH=${APACHE_PUBLIC_PATH}
+
+
 # Set the xdebug version
 ARG XDEBUG_VERSION=3.3.1
 
@@ -48,5 +53,9 @@ RUN set -eux; \
 
 # Install Composer form image DockerHub
 COPY --from=composer:2.6.6 /usr/bin/composer /usr/bin/composer
+
+# Set the Apache public directory
+RUN sed -ri -e 's!/var/www/html!${PUBLIC_PATH}!g' /etc/apache2/sites-available/*.conf
+RUN sed -ri -e 's!/var/www/html!${PUBLIC_PATH}!g' /etc/apache2/apache2.conf /etc/apache2/conf-available/*.conf
 
 WORKDIR /var/www/html

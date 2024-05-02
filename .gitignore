@@ -1,4 +1,7 @@
 /bancos/mysql/imports/*
 !/bancos/mysql/imports/readme.md
 
+/bancos/postgresql/imports/*
+!/bancos/postgresql/imports/readme.md
+
 /.vscode

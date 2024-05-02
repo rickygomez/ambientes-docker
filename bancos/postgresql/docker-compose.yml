@@ -1,0 +1,33 @@
+version: '3.9'
+
+services:
+  dbserver:
+    image: postgres:16.2-alpine3.19
+    volumes:
+      - postgresql:/var/lib/postgresql
+      - ./imports:/imports
+    restart: always
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      #POSTGRES_DB: test_db
+    ports:
+      - "5432:5432"
+
+
+  pgadmin:
+    image: dpage/pgadmin4
+    depends_on:
+      - dbserver
+    restart: always
+    volumes:
+      - ./config/servers.json:/pgadmin4/servers.json
+    environment:
+      PGADMIN_DEFAULT_EMAIL: root@admin.com
+      PGADMIN_DEFAULT_PASSWORD: root
+    ports:
+      - "5500:80"
+
+
+volumes:
+  postgresql:

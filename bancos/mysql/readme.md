@@ -18,7 +18,7 @@ docker compose up
 
 Existe uma pasta chamada "/imports" que pode ser usada para inserir o dump de bancos em .sql para importar via terminal.
 
-A senha do usaurio root do banco esta definida no arquivo "docker-compose.yml"
+A senha do usuário root do banco esta definida no arquivo "docker-compose.yml"
 
 E possivel acessar o phpmyadmin pela porta 8000 que foi definada no arquivo "docker-compose.yml"
 

@@ -8,7 +8,8 @@ services:
       args:
           PHP_APACHE_VERSION: 8.3
           XDEBUG_VERSION: 3.3.1
-          APACHE_PUBLIC_PATH: /var/www/html    
+          APACHE_PUBLIC_PATH: /var/www/html
+          NODEJS_VERSION: 20
     volumes:
       - ../:/var/www/html/
       - ./config/php.ini:/usr/local/etc/php/conf.d/php.ini

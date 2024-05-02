@@ -36,3 +36,19 @@ Para modificar a pasta publica do apache altere o argumento APACHE_PUBLIC_PATH n
 #### Pasta publica Padrão
 
 * APACHE_PUBLIC_PATH: /var/www/html
+
+### NodeJs
+
+Para definir qual versão do NodeJs e necessário alterando o argumento NODEJS_VERSION no arquivo "docker-compose.yml", caso não seja definido o argumento NODEJS_VERSION NodeJs não sera instalado.
+
+#### NodeJS 20
+
+* NODEJS_VERSION: 20
+
+#### NodeJS 18
+
+* NODEJS_VERSION: 18
+
+#### NodeJS 16
+
+* NODEJS_VERSION: 16

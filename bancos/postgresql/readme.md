@@ -1,4 +1,4 @@
-# Ambinte Dev Postgres
+# Ambinte Dev PostgreSQL
 
 * Autor: Ricardo Gómez
 * E-mail: rickygomez.rj@gmqil.com

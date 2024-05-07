@@ -15,7 +15,7 @@ ARG NODEJS_VERSION
 # Enable Apache modules
 RUN a2enmod rewrite
 
-# Install PostgreSQL client and its PHP extensions
+# Install PHP extensions
 RUN set -eux; \
     apt-get update; \
     apt-get upgrade -y; \
@@ -31,6 +31,7 @@ RUN set -eux; \
             libwebp-dev \
             libxpm-dev \
             libmcrypt-dev \
+            libzip-dev \
             libonig-dev; \
     rm -rf /var/lib/apt/lists/*
 
@@ -51,6 +52,8 @@ RUN set -eux; \
             --with-xpm \
             --with-freetype; \
     docker-php-ext-install gd; \
+    # Install the PHP zip library
+    docker-php-ext-install zip; \
     php -r 'var_dump(gd_info());'
 
 # Install Composer form image DockerHub

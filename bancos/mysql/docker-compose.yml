@@ -31,3 +31,8 @@ services:
 
 volumes:
   mysql_data:
+    driver: local
+    driver_opts:
+      type: none
+      device: ../../volumes/mysql_data
+      o: bind

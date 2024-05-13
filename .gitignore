@@ -1,3 +1,6 @@
+/volumes/*
+!/volumes/readme.md
+
 /bancos/mysql/imports/*
 !/bancos/mysql/imports/readme.md
 

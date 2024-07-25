@@ -20,19 +20,19 @@ RUN set -eux; \
     apt-get update; \
     apt-get upgrade -y; \
     apt-get install -y --no-install-recommends \
-            curl \
-            libmemcached-dev \
-            libz-dev \
-            libpq-dev \
-            libjpeg-dev \
-            libpng-dev \
-            libfreetype6-dev \
-            libssl-dev \
-            libwebp-dev \
-            libxpm-dev \
-            libmcrypt-dev \
-            libzip-dev \
-            libonig-dev; \
+        curl \
+        libmemcached-dev \
+        libz-dev \
+        libpq-dev \
+        libjpeg-dev \
+        libpng-dev \
+        libfreetype6-dev \
+        libssl-dev \
+        libwebp-dev \
+        libxpm-dev \
+        libmcrypt-dev \
+        libzip-dev \
+        libonig-dev; \
     rm -rf /var/lib/apt/lists/*
 
 
@@ -46,11 +46,11 @@ RUN set -eux; \
     docker-php-ext-install pdo_pgsql; \
     # Install the PHP gd library
     docker-php-ext-configure gd \
-            --prefix=/usr \
-            --with-jpeg \
-            --with-webp \
-            --with-xpm \
-            --with-freetype; \
+        --prefix=/usr \
+        --with-jpeg \
+        --with-webp \
+        --with-xpm \
+        --with-freetype; \
     docker-php-ext-install gd; \
     # Install the PHP zip library
     docker-php-ext-install zip; \
@@ -71,4 +71,10 @@ RUN if [ ! -z "${NODEJS_VERSION}" ]; then \
         rm nodesource_setup.sh; \
     fi
 
-WORKDIR /var/www/html
+WORKDIR /var/www/htm
+
+RUN useradd -ms /bin/bash devphp
+RUN usermod -g www-data devphp
+RUN chown -R devphp:www-data /var/www/html
+
+USER devphp

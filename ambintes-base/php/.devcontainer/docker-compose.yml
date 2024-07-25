@@ -17,3 +17,5 @@ services:
             #- /var/www/html/node_modules
         ports:
             - 8800:80
+        environment:
+            - CHOKIDAR_USEPOLLING=true

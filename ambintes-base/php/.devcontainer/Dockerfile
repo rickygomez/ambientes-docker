@@ -56,6 +56,10 @@ RUN set -eux; \
     docker-php-ext-install zip; \
     php -r 'var_dump(gd_info());'
 
+# Install opcache to PHP
+RUN docker-php-ext-configure opcache --enable-opcache \
+    && docker-php-ext-install opcache
+
 # Install Composer form image DockerHub
 COPY --from=composer:2.6.6 /usr/bin/composer /usr/bin/composer
 

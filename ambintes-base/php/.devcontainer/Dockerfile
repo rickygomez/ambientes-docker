@@ -75,7 +75,7 @@ RUN if [ ! -z "${NODEJS_VERSION}" ]; then \
         rm nodesource_setup.sh; \
     fi
 
-WORKDIR /var/www/htm
+WORKDIR /var/www/html
 
 RUN useradd -ms /bin/bash devphp
 RUN usermod -g www-data devphp

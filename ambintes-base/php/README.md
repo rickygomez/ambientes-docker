@@ -10,49 +10,62 @@ Ambiente Base em PHP e Xdebug, usando Docker no VS Code através o Dev Container
 
 ## Acessando via Navegador Web
 
-Para acessa via Navegador Web usar a porta 8800 que foi definada no arquivo "docker-compose.yml"
+Para acessa via Navegador Web usar a porta **8000** que foi definida no arquivo env em **.devcontainer/.env**, essa porta pode ser alterada nesse mesmo arquivo alterando a variável **HOST_PORT**
 
 ## Configurações
 
-### Versão do PHP
+### Definido pasta do projeto
 
-Para cada versão do PHP é necessário alterar a o Xdebug compatível, alterando os argumentos XDEBUG_VERSION e PHP_APACHE_VERSION no arquivo "docker-compose.yml"
-
-#### PHP 8.3 (Padrão)
-
-* PHP_APACHE_VERSION: 8.3
-* XDEBUG_VERSION: 3.3.1
-
-#### PHP 8.2
-
-* PHP_APACHE_VERSION: 8.2
-* XDEBUG_VERSION: 3.3.1
-
-#### PHP 7.4
-
-* PHP_APACHE_VERSION: 7.4
-* XDEBUG_VERSION: 3.1.1
+Por padrão os arquivos são carregados diretamente na pasta html do apache, porem para uma melhor organização ele podem ser incluídos e uma estrutura diferente dentro dessa pasta, para isso basta altera a variável **PROJECT_PATH** no arquivo o env em **.devcontainer/.env** incluindo as pastas relativas a serem criadas.
+Essa pasta também ser utilizada como a pasta principal do workspace do devcontainer
 
 ### Modificar pasta publica do apache
 
-Para modificar a pasta publica do apache altere o argumento APACHE_PUBLIC_PATH no arquivo "docker-compose.yml"
+Para modificar a pasta publica do apache, basta altera a variável **PROJECT_PATH_PUBLIC** no arquivo o env em **.devcontainer/.env**, incluindo as pastas relativas a serem criadas. Essa estrutura deva en consideração a estrutura aterior definida no projeto.
 
-#### Pasta publica Padrão
+### Versão do PHP
 
-* APACHE_PUBLIC_PATH: /var/www/html
+Para cada versão do PHP é necessário alterar a o Xdebug compatível, alterando as variáveis  **XDEBUG_VERSION** e **PHP_APACHE_VERSION** no arquivo env em **.devcontainer/.env**
+
+#### PHP 8.3 (Padrão)
+
+```.env
+PHP_APACHE_VERSION=8.3
+XDEBUG_VERSION=3.3.1
+```
+
+#### PHP 8.2
+
+```.env
+PHP_APACHE_VERSION=8.2
+XDEBUG_VERSION=3.3.1
+```
+
+#### PHP 7.4
+
+```.env
+PHP_APACHE_VERSION=7.4
+XDEBUG_VERSION=3.1.1
+```
 
 ### NodeJs
 
-Para definir qual versão do NodeJs e necessário alterando o argumento NODEJS_VERSION no arquivo "docker-compose.yml", caso não seja definido o argumento NODEJS_VERSION NodeJs não sera instalado.
+Para definir qual versão do NodeJs e necessário alterando a variável **NODEJS_VERSION** no arquivo env em **.devcontainer/.env**, caso não seja definido a variável **NODEJS_VERSION** NodeJs não sera instalado.
 
 #### NodeJS 20
 
-* NODEJS_VERSION: 20
+```.env
+NODEJS_VERSION: 20
+```
 
 #### NodeJS 18
 
-* NODEJS_VERSION: 18
+```.env
+NODEJS_VERSION: 18
+```
 
 #### NodeJS 16
 
-* NODEJS_VERSION: 16
+```.env
+NODEJS_VERSION: 16
+```

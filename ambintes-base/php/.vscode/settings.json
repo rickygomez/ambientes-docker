@@ -1,57 +1,58 @@
 {
-    //* padrão de cor da janela utilizado no projeto
-    "peacock.color": "#0000ff",
-    //* configuração do idioma utilizado no projeto
-    "cSpell.language": "en,pt_BR",
-    //* Preferencias pessoais o VSCode
-    //! "editor.wordSeparators": "`~!@%^&*()-=+[{]}\\|;:'\",.<>/?",
-    "editor.formatOnSave": true,
-    "files.autoSave": "afterDelay",
-    "explorer.autoReveal": false,
-    "workbench.statusBar.visible": true,
-    "workbench.sideBar.location": "right",
-    "workbench.iconTheme": "material-icon-theme",
-    "workbench.panel.defaultLocation": "bottom",
-    //* configurações de analise de arquivos
-    "files.watcherExclude": {
-        "**/.git/objects/**": true,
-        "**/.git/subtree-cache/**": true,
-        "**/node_modules/*/**": true,
-        "**/.hg/store/**": true,
-        "**/vendor/*/**": true
-    },
-    "files.associations": {
-        "*.env": "env",
-        "*.env.*": "env",
-        ".env": "env",
-        ".env.*": "env"
-    },
-    //* preferencais visuais do codigo
-    "editor.guides.bracketPairs": "active",
-    "editor.bracketPairColorization.enabled": false,
-    "RainbowBrackets.forceUniqueOpeningColor": false,
-    "RainbowBrackets.consecutivePairColors": [
-        "()",
-        "[]",
-        "{}",
-        [
-            "#F7D600",
-            "#1002CC",
-            "#B000A7",
-            "#05e20c",
-            "#D15C00",
-            "#0090A3"
-        ],
-        "Revioletd"
+  //* padrão de cor da janela utilizado no projeto
+  "peacock.color": "#0000ff",
+  //* configuração do idioma utilizado no projeto
+  "cSpell.language": "en,pt_BR",
+  //* Preferencias pessoais o VSCode
+  //! "editor.wordSeparators": "`~!@%^&*()-=+[{]}\\|;:'\",.<>/?",
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "editor.formatOnSave": true,
+  "files.autoSave": "afterDelay",
+  "explorer.autoReveal": false,
+  "workbench.statusBar.visible": true,
+  "workbench.sideBar.location": "right",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.panel.defaultLocation": "bottom",
+  //* configurações de analise de arquivos
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true,
+    "**/.hg/store/**": true,
+    "**/vendor/*/**": true
+  },
+  "files.associations": {
+    "*.env": "properties",
+    "*.env.*": "properties",
+    ".env": "properties",
+    ".env.*": "properties"
+  },
+  //* preferencais visuais do codigo
+  "editor.guides.bracketPairs": "active",
+  "editor.bracketPairColorization.enabled": false,
+  "RainbowBrackets.forceUniqueOpeningColor": false,
+  "RainbowBrackets.consecutivePairColors": [
+    "()",
+    "[]",
+    "{}",
+    [
+      "#F7D600",
+      "#1002CC",
+      "#B000A7",
+      "#05e20c",
+      "#D15C00",
+      "#0090A3"
     ],
-    "indentRainbow.colors": [
-        "rgba(247, 214, 0, 0.1)",
-        "rgba(16, 2, 204, 0.1)",
-        "rgba(176, 0, 167, 0.1)",
-        "rgba(5, 226, 12, 0.1)",
-        "rgba(209, 92, 0, 0.1)",
-        "rgba(0, 144, 163, 0.1)"
-    ],
-    "indentRainbow.errorColor": "rgba(128,32,32,0.6)",
-    "indentRainbow.indicatorStyle": "classic",
+    "Revioletd"
+  ],
+  "indentRainbow.colors": [
+    "rgba(247, 214, 0, 0.1)",
+    "rgba(16, 2, 204, 0.1)",
+    "rgba(176, 0, 167, 0.1)",
+    "rgba(5, 226, 12, 0.1)",
+    "rgba(209, 92, 0, 0.1)",
+    "rgba(0, 144, 163, 0.1)"
+  ],
+  "indentRainbow.errorColor": "rgba(128,32,32,0.6)",
+  "indentRainbow.indicatorStyle": "classic",
 }

@@ -4,7 +4,6 @@
   //* configuração do idioma utilizado no projeto
   "cSpell.language": "en,pt_BR",
   //* Preferencias pessoais o VSCode
-  //! "editor.wordSeparators": "`~!@%^&*()-=+[{]}\\|;:'\",.<>/?",
   "terminal.integrated.fontFamily": "MesloLGS NF",
   "terminal.integrated.defaultProfile.linux": "zsh",
   "editor.formatOnSave": true,
@@ -56,4 +55,29 @@
   ],
   "indentRainbow.errorColor": "rgba(128,32,32,0.6)",
   "indentRainbow.indicatorStyle": "classic",
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#3333ff",
+    "activityBar.background": "#3333ff",
+    "activityBar.foreground": "#e7e7e7",
+    "activityBar.inactiveForeground": "#e7e7e799",
+    "activityBarBadge.background": "#600000",
+    "activityBarBadge.foreground": "#e7e7e7",
+    "commandCenter.border": "#e7e7e799",
+    "sash.hoverBorder": "#3333ff",
+    "statusBar.background": "#0000ff",
+    "statusBar.foreground": "#e7e7e7",
+    "statusBarItem.hoverBackground": "#3333ff",
+    "statusBarItem.remoteBackground": "#0000ff",
+    "statusBarItem.remoteForeground": "#e7e7e7",
+    "titleBar.activeBackground": "#0000ff",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveBackground": "#0000ff99",
+    "titleBar.inactiveForeground": "#e7e7e799"
+  },
+  //* configurações para o PHP
+  //! "editor.wordSeparators": "`~!@%^&*()-=+[{]}\\|;:'\",.<>/?",
+  "php-cs-fixer.config": "/var/www/html/.php-cs-fixer.php",
+  "[php]": {
+    "editor.defaultFormatter": "mansoorkhan96.php-cs-fixer",
+  },
 }

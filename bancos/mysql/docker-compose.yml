@@ -1,38 +1,47 @@
 version: '3.9'
+name: dev_mysql
 
 services:
-  dbserver:
-    image: mysql:5.7
-    volumes:
-      - mysql_data:/var/lib/mysql
-      - ./imports:/imports
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-      #MYSQL_DATABASE: NAME_DB
-      #MYSQL_USER: USER_DB
-      #MYSQL_PASSWORD: PASS_DB
-      MYSQL_TCP_PORT: 3306
-    ports:
-    - 3306:3306
-    expose:
-      - 3306
+    banco:
+        image: mysql:5.7
+        volumes:
+            - mysql_data:/var/lib/mysql
+            - ./imports:/imports
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            #MYSQL_DATABASE: NAME_DB
+            #MYSQL_USER: USER_DB
+            #MYSQL_PASSWORD: PASS_DB
+            MYSQL_TCP_PORT: 3306
+        ports:
+            - 3306:3306
+        expose:
+            - 3306
+        networks:
+            - network
 
-  phpmyadmin:
-    depends_on:
-      - dbserver
-    image: phpmyadmin/phpmyadmin
-    restart: always
-    ports:
-      - 8000:80
-    environment:
-      PMA_HOST: dbserver:3306
-      MYSQL_ROOT_PASSWORD: root
+    phpmyadmin:
+        depends_on:
+            - banco
+        image: phpmyadmin/phpmyadmin
+        restart: always
+        ports:
+            - 8000:80
+        environment:
+            PMA_HOST: banco:3306
+            MYSQL_ROOT_PASSWORD: root
+        networks:
+            - network
+
+networks:
+    network:
+        driver: bridge
 
 volumes:
-  mysql_data:
-    driver: local
-    driver_opts:
-      type: none
-      device: ../../volumes/mysql_data
-      o: bind
+    mysql_data:
+        driver: local
+        driver_opts:
+            type: none
+            device: ../../volumes/mysql_data
+            o: bind

@@ -90,5 +90,18 @@
         "editor.formatOnSave": true,
     },
     "laravel-pint.enable": true,
+    //* configurações para o JavaScript e vue
+    "[vue]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll.eslint": "explicit"
+        },
+    },
+    "[javascript]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll.eslint": "explicit"
+        },
+    },
     "errorLens.messageBackgroundMode": "message",
 }

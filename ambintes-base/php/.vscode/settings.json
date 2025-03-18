@@ -1,12 +1,13 @@
 {
     //* padrão de cor da janela utilizado no projeto
     "peacock.color": "#0000ff",
+    "peacock.remoteColor": "#0000ff",
     //* configuração do idioma utilizado no projeto
     "cSpell.language": "en,pt_BR",
     //* Preferencias pessoais o VSCode
     "terminal.integrated.fontFamily": "MesloLGS NF",
     "terminal.integrated.defaultProfile.linux": "zsh",
-    "editor.formatOnSave": true,
+    "editor.formatOnSave": false,
     "files.autoSaveDelay": 3000,
     "files.autoSave": "afterDelay",
     "explorer.autoReveal": false,
@@ -83,7 +84,7 @@
         "editor.wordSeparators": "`~!@%^&*()-=+[{]}\\|;:'\",.<>/?",
         "editor.defaultFormatter": "mansoorkhan96.php-cs-fixer",
     }, */
-    //* configurações para o PHP Laravel
+    //* configurações para o PHP
     "[php]": {
         "editor.wordSeparators": "`~!@%^&*()-=+[{]}\\|;:'\",.<>/?",
         "editor.defaultFormatter": "open-southeners.laravel-pint",
@@ -93,15 +94,18 @@
     //* configurações para o JavaScript e vue
     "[vue]": {
         "editor.formatOnSave": true,
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint",
         "editor.codeActionsOnSave": {
             "source.fixAll.eslint": "explicit"
         },
     },
     "[javascript]": {
         "editor.formatOnSave": true,
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint",
         "editor.codeActionsOnSave": {
             "source.fixAll.eslint": "explicit"
         },
     },
+    "eslint.enable": true,
     "errorLens.messageBackgroundMode": "message",
 }

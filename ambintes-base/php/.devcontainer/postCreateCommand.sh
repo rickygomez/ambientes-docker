@@ -8,7 +8,7 @@ echo '[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh' >> ~/.zshrc
 #alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
 
 ## configurando o PHP-CS-Fixer
-composer global require friendsofphp/php-cs-fixer
-composer global config home
-grep -qxF 'export PATH="$PATH:$HOME/.config/composer/vendor/bin"' ~/.bashrc || echo -e '\nexport PATH="$PATH:$HOME/.config/composer/vendor/bin"' >> ~/.bashrc
-source ~/.bashrc
+#composer global require friendsofphp/php-cs-fixer
+#composer global config home
+#grep -qxF 'export PATH="$PATH:$HOME/.config/composer/vendor/bin"' ~/.bashrc || echo -e '\nexport PATH="$PATH:$HOME/.config/composer/vendor/bin"' >> ~/.bashrc
+#source ~/.bashrc

@@ -9,7 +9,7 @@
     "terminal.integrated.defaultProfile.linux": "zsh",
     "editor.formatOnSave": false,
     "files.autoSaveDelay": 3000,
-    "files.autoSave": "afterDelay",
+    "files.autoSave": "off",
     "explorer.autoReveal": false,
     "workbench.statusBar.visible": true,
     "workbench.sideBar.location": "right",
@@ -107,5 +107,5 @@
         },
     },
     "eslint.enable": true,
-    "errorLens.messageBackgroundMode": "message",
+    "errorLens.messageBackgroundMode": "message"
 }

@@ -16,13 +16,13 @@ node serve.js
 
 ## Acessando via Navegador Web
 
-Para acessa via Navegador Web usar a porta 3300 que foi definida no arquivo "docker-compose.yml"
+Para acessa via Navegador Web usar a porta 3300 que foi definida o argumento HOST_PORT no arquivo ".devcontainer/.env"
 
 ## Configurações
 
 ### Versão do NodeJs
 
-Para modificar a versão  do NodeJs é necessário alterar o argumento NODEJS_VERSION no arquivo "docker-compose.yml"
+Para modificar a versão  do NodeJs é necessário alterar o argumento NODEJS_VERSION no arquivo ".devcontainer/.env"
 
 #### NodeJs 20 (Padrão)
 

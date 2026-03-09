@@ -9,6 +9,9 @@ ENV PUBLIC_PATH=${APACHE_PUBLIC_PATH}
 # Set the xdebug version
 ARG XDEBUG_VERSION=3.3.1
 
+# Set the composer version
+ARG COMPOSER_VERSION=2.6.6
+
 # Set the nodejs version
 ARG NODEJS_VERSION
 
@@ -61,7 +64,7 @@ RUN docker-php-ext-configure opcache --enable-opcache \
     && docker-php-ext-install opcache
 
 # Install Composer form image DockerHub
-COPY --from=composer:2.6.6 /usr/bin/composer /usr/bin/composer
+COPY --from=composer:${COMPOSER_VERSION} /usr/bin/composer /usr/bin/composer
 
 # Set the Apache public directory
 RUN sed -ri -e 's!/var/www/html!${PUBLIC_PATH}!g' /etc/apache2/sites-available/*.conf

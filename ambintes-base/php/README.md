@@ -27,11 +27,18 @@ Para modificar a pasta publica do apache, basta altera a variável **PROJECT_PAT
 
 Para cada versão do PHP é necessário alterar a o Xdebug compatível, alterando as variáveis  **XDEBUG_VERSION** e **PHP_APACHE_VERSION** no arquivo env em **.devcontainer/.env**
 
-#### PHP 8.3 (Padrão)
+#### PHP 8.4 (Padrão)
+
+```.env
+PHP_APACHE_VERSION=8.4
+XDEBUG_VERSION=3.4.7
+```
+
+#### PHP 8.3
 
 ```.env
 PHP_APACHE_VERSION=8.3
-XDEBUG_VERSION=3.3.1
+XDEBUG_VERSION=3.4.7
 ```
 
 #### PHP 8.2

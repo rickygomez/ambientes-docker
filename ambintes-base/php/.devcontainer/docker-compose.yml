@@ -10,6 +10,7 @@ services:
                 PHP_APACHE_VERSION: ${PHP_APACHE_VERSION}
                 XDEBUG_VERSION: ${XDEBUG_VERSION}
                 NODEJS_VERSION: ${NODEJS_VERSION}
+                COMPOSER_VERSION: ${COMPOSER_VERSION}
         volumes:
             - ../:/var/www/html${PROJECT_PATH}
             - ./config/php.ini:/usr/local/etc/php/conf.d/php.ini

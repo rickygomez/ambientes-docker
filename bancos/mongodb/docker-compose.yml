@@ -1,0 +1,33 @@
+version: '3.9'
+
+services:
+
+  mongo:
+    image: mongo:7
+    restart: always
+    volumes:
+      - mondodb_data:/data/db/:/data/db/
+      - /etc/timezone:/etc/timezone:ro
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+      #MONGO_INITDB_DATABASE: init
+    ports:
+      - 27017:27017
+    
+
+  mongoexpress:
+    image: mongo-express
+    restart: always
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: example
+      ME_CONFIG_MONGODB_URL: mongodb://root:example@mongo:27017/
+      ME_CONFIG_BASICAUTH_USERNAME: admin
+      ME_CONFIG_BASICAUTH_PASSWORD: admin
+    ports:
+      - 8900:8081
+
+
+volumes:
+  mondodb_data:
